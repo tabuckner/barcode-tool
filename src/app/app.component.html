@@ -1,9 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" [src]="base64Image">
+  <h1>{{ title }}</h1>
+  <img width="300" alt="Angular Logo" [src]="base64Image || 'assets/logo.png'">
   <h3>{{ randomVin }}</h3>
   <button (click)="getQrCode()">new</button>
 </div>

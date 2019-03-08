@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import _QRCode from 'qrcode';
-
+import LazyVin from 'lazy-vin-lib';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'barcode-tool';
+  title = 'Barcode Tool';
   public randomVin: string;
   public base64Image: string;
-  // private vinGenerator;
+  private lazyVin: LazyVin;
   private QRCode;
 
   constructor() {
-    // this.vinGenerator = _VinGenerator;
+    this.lazyVin = new LazyVin();
     this.QRCode = _QRCode;
   }
 
@@ -34,12 +34,7 @@ export class AppComponent implements OnInit {
   }
 
   public setRandomVin() {
-    const dirtyVin = 'WDBEB28D6MB240164'; // TODO: Create a lazy library to serve a few options.
-    let cleanVin = dirtyVin.substring(0, dirtyVin.length - 6);
-    for (let i = 0; i < 6; i++) {
-      cleanVin += Math.floor(Math.random() * 10);
-    }
-    console.log(cleanVin, cleanVin.length);
+    const cleanVin = this.lazyVin.getRandomCleanVin();
     this.randomVin = cleanVin;
   }
 

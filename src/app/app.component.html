@@ -1,8 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>{{ title }}</h1>
-  <img width="300" alt="Angular Logo" [src]="base64Image || 'assets/logo.png'">
-  <h3>{{ randomVin }}</h3>
-  <button (click)="getQrCode()">new</button>
+<mat-toolbar color="primary">{{ title }}</mat-toolbar>
+<div class="barcode-tool">
+  <div class="barcode-tool__img">
+    <img alt="Angular Logo" [src]="base64Image || 'assets/logo.png'">
+  </div>
+  <h3 class="barcode-tool__vin">{{ randomVin }}</h3>
+  <div class="barcode-tool__actions">
+    <button mat-raised-button color="primary" (click)="getQrCode()">New</button>
+  </div>
 </div>
 

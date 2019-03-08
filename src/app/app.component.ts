@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import _QRCode from 'qrcode';
 import LazyVin from 'lazy-vin-lib';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

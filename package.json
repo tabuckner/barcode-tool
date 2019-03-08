@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
-    "lazy-vin-lib": "/home/taylor/Dev/Portfolio/Open-Source/lazy-vin-lib",
+    "lazy-vin-lib": "^0.0.1",
     "qrcode": "^1.3.3",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",

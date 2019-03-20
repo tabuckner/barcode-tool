@@ -1,0 +1,14 @@
+<div class="check-digit">
+  <mat-card>
+    <mat-card-title>VIN Check Digit Validator</mat-card-title>
+    <mat-card-content>
+      <div class="check-digit__status">{{ status }}</div>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Enter a VIN" [(ngModel)]="vin" (ngModelChange)="reset()">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="submit()" [disabled]="vin.length !== 17">Validate</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

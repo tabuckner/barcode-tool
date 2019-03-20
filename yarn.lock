@@ -323,9 +323,10 @@
   version "11.10.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.10.5.tgz#fbaca34086bdc118011e1f05c47688d432f2d571"
 
-"@types/node@~8.9.4":
-  version "8.9.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.9.5.tgz#162b864bc70be077e6db212b322754917929e976"
+"@types/node@^11.11.4":
+  version "11.11.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.11.4.tgz#8808bd5a82bbf6f5d412eff1c228d178e7c24bb3"
+  integrity sha512-02tIL+QIi/RW4E5xILdoAMjeJ9kYq5t5S2vciUdFPXv/ikFTb0zK8q9vXkg4+WAJuYXGiVT1H28AkD2C+IkXVw==
 
 "@types/q@^0.0.32":
   version "0.0.32"
@@ -3377,9 +3378,10 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
-lazy-vin-lib@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/lazy-vin-lib/-/lazy-vin-lib-0.0.1.tgz#482f1349d50ee40da6520933c4e776d102f4c50b"
+lazy-vin-lib@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/lazy-vin-lib/-/lazy-vin-lib-0.0.4.tgz#dde4de39e4201ab4800f4ee923fc144e46ac2a6c"
+  integrity sha512-H/RDX7rMOVJR5RdQ5N2xyHyMw4thTjqfgiBhlKvn22c+IrJz9VDpueoysfTau1R0DXBwDkziB9z8fg3FvIBeow==
 
 lcid@^1.0.0:
   version "1.0.0"

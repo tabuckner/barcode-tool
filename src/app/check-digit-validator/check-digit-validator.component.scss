@@ -1,0 +1,14 @@
+.check-digit {
+  text-align: center;
+  height: calc(100vh - 64px);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 599px) {
+    height: calc(100vh - 56px);
+  }
+
+
+}

@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatToolbarModule } from '@angular/material';
 
 const routes: Routes = [
+  { path: 'barcode-tool', redirectTo: '/random-vin', pathMatch: 'full' },
   { path: '', redirectTo: '/random-vin', pathMatch: 'full' },
   { path: 'random-vin', loadChildren: './random-vin/random-vin.module#RandomVinModule' },
   { path: 'check-digit-validator', loadChildren: './check-digit-validator/check-digit-validator.module#CheckDigitValidatorModule' }

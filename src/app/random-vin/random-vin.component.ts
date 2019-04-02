@@ -36,10 +36,15 @@ export class RandomVinComponent implements OnInit {
 
   public setRandomVin() {
     const validVin = this.lazyVin.getRandomValidVin();
-    this.randomVin = validVin;
+    const safeVin = this.lazyVin.fixCheckDigit(validVin);
+    this.randomVin = safeVin;
   }
 
   public getQrCodeDataUrl(data: string): Promise<string> {
     return this.QRCode.toDataURL(data);
+  }
+
+  public get validCheckDigit(): boolean {
+    return this.lazyVin.fixCheckDigit(this.randomVin) === this.randomVin;
   }
 }

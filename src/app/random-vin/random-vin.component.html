@@ -1,0 +1,10 @@
+<div class="random-vin">
+  <div class="random-vin__img">
+    <img alt="Angular Logo" [src]="base64Image || 'assets/logo.png'">
+  </div>
+  <h3 class="random-vin__vin">{{ randomVin }}</h3>
+  <h4 class="random-vin__valid">{{ validCheckDigit ? 'The check digit is valid' : 'The check digit is not valid' }}</h4>
+  <div class="random-vin__actions">
+    <button mat-raised-button color="primary" (click)="getQrCode()">New</button>
+  </div>
+</div>

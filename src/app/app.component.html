@@ -1,8 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>{{ title }}</h1>
-  <img width="300" alt="Angular Logo" [src]="base64Image || 'assets/logo.png'">
-  <h3>{{ randomVin }}</h3>
-  <button (click)="getQrCode()">new</button>
-</div>
+<mat-toolbar color="primary">
+  {{ title }} - v.{{ version }}
+  <div class="toolbar-spacer"></div>
+  <button mat-button [routerLink]="['/random-vin']" >Random Vin</button>
+  <div class="wip">
+    <button mat-button [routerLink]="['/check-digit-validator']">Check Digit Validator</button>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>
 

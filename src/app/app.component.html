@@ -3,7 +3,9 @@
   {{ title }} - v.{{ version }}
   <div class="toolbar-spacer"></div>
   <button mat-button [routerLink]="['/random-vin']" >Random Vin</button>
-  <button mat-button [routerLink]="['/check-digit-validator']" >Check Digit Validator</button>
+  <div class="wip">
+    <button mat-button [routerLink]="['/check-digit-validator']">Check Digit Validator</button>
+  </div>
 </mat-toolbar>
 <router-outlet></router-outlet>
 

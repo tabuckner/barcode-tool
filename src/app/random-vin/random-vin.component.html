@@ -2,7 +2,15 @@
   <div class="random-vin__img">
     <img alt="Angular Logo" [src]="base64Image || 'assets/logo.png'">
   </div>
-  <h3 class="random-vin__vin">{{ randomVin }}</h3>
+  <div class="random-vin__vin">
+    <button mat-button
+      matTooltip="Copy to clipboard"
+      matTooltipPosition="after"
+      aria-label="Button that copies VIN to clipboard."
+      (click)="copyVinToClipboard()">
+      <span #vinText>{{ randomVin }}</span>
+    </button>
+  </div>
   <div class="random-vin__vehicle-info">
     <div class="random-vin__vehicle-info__text" *ngIf="shouldShowVehicleInfoText" [@fadeInOut]>{{ vehicleInfoText }}</div>
   </div>

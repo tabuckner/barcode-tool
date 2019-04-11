@@ -35,8 +35,19 @@ $vehicle-info-line-height: 24px;
   }
 
   &__actions {
+    display: flex;
     width: 100%;
     margin-bottom: 36px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 100%;
+
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+    }
   }
 
   &__vehicle-info {
@@ -44,7 +55,6 @@ $vehicle-info-line-height: 24px;
     width: 100%;
     font-size: 18px;
     text-transform: capitalize;
-    margin-bottom: 16px;
     min-height: $vehicle-info-line-height + 16px;
     margin-top: 12px;
 

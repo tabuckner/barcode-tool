@@ -1,4 +1,3 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
@@ -14,7 +13,7 @@
 $barcode-tool-base-color: #1ba0f7;
 $barcode-tool-warn-color: #d44960;
 
-$barcode-tool-primary-palette: get-mat-palette($barcode-tool-base-color);
+$barcode-tool-primary-palette: get-mat-palette($barcode-tool-base-color, true);
 $barcode-tool-warn-palette: get-mat-palette($barcode-tool-warn-color);
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
@@ -36,7 +35,6 @@ $barcode-tool-theme: mat-light-theme($barcode-tool-primary, $barcode-tool-accent
 
 /* You can add global styles to this file, and also import other style files */
 body {
-  // background: linear-gradient(283deg,#37c6f3,#406bb3);
   min-height: 100vh;
 }
 

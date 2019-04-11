@@ -1,3 +1,4 @@
+@import '~src/variables';
 .toolbar-spacer {
   flex: 1 1 auto;
 }
@@ -22,4 +23,12 @@
       }
     }
   }
+}
+
+footer.footer {
+  height: $footer-height;
+  background: rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -3600,10 +3600,10 @@ md5.js@^1.3.4:
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
 
-mdp-sass@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/mdp-sass/-/mdp-sass-1.0.1.tgz#1e9c35fd69b219278c5b85b287b73847fda3f9ce"
-  integrity sha512-Hbfy+8J4eY8h7/BCq0T+qrw6zvl4G6Yx+cD/uxypVQIuuu2bREh5f9NMg81xeuWxPUaVc4E0pz2n1V6N+4a5lw==
+mdp-sass@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/mdp-sass/-/mdp-sass-1.0.4.tgz#322cf938fccffe5266d9cbde75b0daeb5953f5e6"
+  integrity sha512-oQobyhoTde9JX2M+MLfQascaX7c6WEajrJcrBbDf9QXofJKw29wY+EB6IQCennWpMSfzIChq+t62OfG7PzrkSw==
 
 media-typer@0.3.0:
   version "0.3.0"

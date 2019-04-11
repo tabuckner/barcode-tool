@@ -2,10 +2,11 @@
 <mat-toolbar color="primary">
   {{ title }} - v.{{ version }}
   <div class="toolbar-spacer"></div>
-  <button mat-button [routerLink]="['/random-vin']" >Random Vin</button>
+  <button mat-button [routerLink]="['/random-vin']" >Random VIN</button>
   <div class="wip">
     <button mat-button [routerLink]="['/check-digit-validator']">Check Digit Validator</button>
   </div>
 </mat-toolbar>
 <router-outlet></router-outlet>
+<footer class="footer">Last deployed at: {{ timestamp }}</footer>
 

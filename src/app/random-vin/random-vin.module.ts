@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RandomVinComponent } from './random-vin.component';
 import { RouterModule, Routes } from '@angular/router';
-import { MatButtonModule, MatTooltipModule, MatRippleModule, MatSnackBarModule } from '@angular/material';
+import { MatButtonModule, MatTooltipModule, MatRippleModule, MatSnackBarModule, MatIconModule } from '@angular/material';
 
 const routes: Routes = [
   { path: '', component: RandomVinComponent }
@@ -16,7 +16,8 @@ const routes: Routes = [
     MatButtonModule,
     MatTooltipModule,
     MatRippleModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatIconModule
   ]
 })
 export class RandomVinModule { }

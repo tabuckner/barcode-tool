@@ -9,4 +9,5 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   public title = 'VIN Tools';
   public version = environment.version;
+  public timestamp = environment.deployTimestamp;
 }

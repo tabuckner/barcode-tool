@@ -54,6 +54,13 @@ export class RandomVinComponent implements OnInit {
     this.randomVin = safeVin;
   }
 
+  public get imageSearchUrl(): string {
+    if (!this.vehicleInfo || !this.vehicleInfo.ModelYear) {
+      return;
+    }
+    return encodeURI(`https://www.google.com/search?tbm=isch&q=${this.vehicleInfoText}`);
+  }
+
   public getQrCodeDataUrl(data: string): Promise<string> {
     return this.QRCode.toDataURL(data);
   }

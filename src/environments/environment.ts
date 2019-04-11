@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  version: require('../../package.json').version
+  version: require('../../package.json').version,
+  deployTimestamp: '{{DEPLOY_TIMESTAMP}}'
 };
 
 /*

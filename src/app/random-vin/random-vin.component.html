@@ -12,10 +12,18 @@
     </button>
   </div>
   <div class="random-vin__vehicle-info">
-    <div class="random-vin__vehicle-info__text" *ngIf="shouldShowVehicleInfoText" [@fadeInOut]>{{ vehicleInfoText }}</div>
+    <div class="random-vin__vehicle-info__text" *ngIf="shouldShowVehicleInfoText" [@fadeInOut]>
+      {{ vehicleInfoText }}
+    </div>
   </div>
-  <h4 class="random-vin__valid">{{ validCheckDigit ? 'The check digit is valid' : 'The check digit is not valid' }}</h4>
+  <!-- <h4 class="random-vin__valid">{{ validCheckDigit ? 'The check digit is valid' : 'The check digit is not valid' }}</h4> -->
   <div class="random-vin__actions">
-    <button mat-raised-button color="primary" (click)="getQrCode()">New</button>
+    <div class="random-vin__actions__item">
+      <button mat-button (click)="link.click();" [disabled]="!shouldShowVehicleInfoText">Get Photos</button>
+      <a style="display: none;" #link [href]="imageSearchUrl" target="_blank"></a>
+    </div>
+    <div class="random-vin__actions__item">
+      <button mat-raised-button color="primary" (click)="getQrCode()">New</button>
+    </div>
   </div>
 </div>

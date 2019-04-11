@@ -1,19 +1,23 @@
+@import '~src/variables';
 $vehicle-info-line-height: 24px;
 
 .random-vin {
   text-align: center;
-  height: calc(100vh - 64px);
+  height: calc(100vh - (64px + #{$footer-height}));
   display: flex;
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
 
   @media screen and (max-width: 599px) {
-    height: calc(100vh - 56px);
+    height: calc(100vh - (56px + #{$footer-height}));
   }
 
   &__img {
     width: 100%;
+    @media screen and (max-height: 660px) {
+      width: auto;
+    }
 
     img {
       max-width: 300px;
@@ -35,8 +39,19 @@ $vehicle-info-line-height: 24px;
   }
 
   &__actions {
+    display: flex;
     width: 100%;
     margin-bottom: 36px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 100%;
+
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+    }
   }
 
   &__vehicle-info {
@@ -44,7 +59,6 @@ $vehicle-info-line-height: 24px;
     width: 100%;
     font-size: 18px;
     text-transform: capitalize;
-    margin-bottom: 16px;
     min-height: $vehicle-info-line-height + 16px;
     margin-top: 12px;
 

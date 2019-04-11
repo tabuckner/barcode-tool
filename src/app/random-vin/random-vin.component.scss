@@ -1,3 +1,5 @@
+$vehicle-info-line-height: 24px;
+
 .random-vin {
   text-align: center;
   height: calc(100vh - 64px);
@@ -21,6 +23,10 @@
 
   &__vin {
     width: 100%;
+
+    .mat-button {
+      font-size: 20px;
+    }
   }
 
   &__valid {
@@ -30,5 +36,24 @@
 
   &__actions {
     width: 100%;
+    margin-bottom: 36px;
+  }
+
+  &__vehicle-info {
+    position: relative;
+    width: 100%;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 16px;
+    min-height: $vehicle-info-line-height + 16px;
+    margin-top: 12px;
+
+    &__text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: $vehicle-info-line-height;
+    }
   }
 }

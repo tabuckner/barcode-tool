@@ -6,7 +6,7 @@ import { MatButtonModule, MatTooltipModule, MatRippleModule, MatSnackBarModule }
 
 const routes: Routes = [
   { path: '', component: RandomVinComponent }
-]
+];
 
 @NgModule({
   declarations: [RandomVinComponent],

@@ -7,8 +7,9 @@
       matTooltip="Copy to clipboard"
       matTooltipPosition="after"
       aria-label="Button that copies VIN to clipboard."
-      (click)="copyVinToClipboard()">
-      <span #vinText>{{ randomVin }}</span>
+      (click)="copyVinToClipboard()"
+      class="gtm-copy-vin-to-clipboard">
+      <span #vinText class="gtm-copy-vin-to-clipboard">{{ randomVin }}</span>
     </button>
   </div>
   <div class="random-vin__vehicle-info">

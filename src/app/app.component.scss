@@ -1,6 +1,40 @@
 @import '~src/variables';
-.toolbar-spacer {
-  flex: 1 1 auto;
+.toolbar {
+  font-weight: 200;
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__logo {
+    padding: 16px;
+    height: 50%;
+    padding-left: 0;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__spacer {
+    flex: 1 1 auto;
+  }
+
+  &__info {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+  }
+
+  &__deployed {
+    opacity: 0.55;
+  }
+
+  &__nav {
+    padding-top: 24px;
+  }
 }
 
 .mat-toolbar {
@@ -23,12 +57,4 @@
       }
     }
   }
-}
-
-footer.footer {
-  height: $footer-height;
-  background: rgba(0, 0, 0, 0.12);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

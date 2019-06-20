@@ -40,3 +40,17 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-ink-bar {
+  height: 4px !important;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.mat-tab-link {
+  text-transform: uppercase;
+}
+
+.mat-tab-label-active {
+  color: $barcode-tool-base-color;
+}

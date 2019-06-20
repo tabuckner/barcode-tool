@@ -1,12 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary">
-  {{ title }} - v.{{ version }}
-  <div class="toolbar-spacer"></div>
-  <button mat-button [routerLink]="['/random-vin']" >Random VIN</button>
-  <div class="wip">
-    <button mat-button [routerLink]="['/check-digit-validator']">Check Digit Validator</button>
+<mat-toolbar color="primary" class="toolbar">
+  <div class="toolbar__brand">
+    <div class="toolbar__logo">
+      <img src="assets/logo-white.png" alt="TAL Logo">
+    </div>
+    {{ title }}
+  </div>
+  <div class="toolbar__spacer"></div>
+  <div class="toolbar__info">
+    <div class="toolbar__version">
+      v.{{ version }}
+    </div>
+    <div class="toolbar__deployed">
+      Last deployed at: {{ timestamp }}
+    </div>
   </div>
 </mat-toolbar>
+<nav mat-tab-nav-bar class="toolbar__nav" mat-align-tabs="center">
+  <a
+    mat-tab-link
+    *ngFor="let link of navLinks"
+    [routerLink]="link.path"
+    routerLinkActive #rla="routerLinkActive"
+    [active]="rla.isActive">
+    {{ link.label }}
+  </a>
+</nav>
 <router-outlet></router-outlet>
-<footer class="footer">Last deployed at: {{ timestamp }}</footer>
 

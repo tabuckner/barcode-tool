@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    margin-right: 8px;
   }
 
   &__logo {
@@ -26,10 +27,15 @@
     font-size: 14px;
     line-height: 16px;
     text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__deployed {
     opacity: 0.55;
+    display: flex;
+    align-items: center;
   }
 
   &__nav {

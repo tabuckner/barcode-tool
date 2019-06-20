@@ -5,7 +5,7 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatToolbarModule, MatTabsModule } from '@angular/material';
+import { MatButtonModule, MatToolbarModule, MatTabsModule, MatIconModule } from '@angular/material';
 
 const routes: Routes = [
   { path: '', redirectTo: '/random-vin', pathMatch: 'full' },
@@ -27,7 +27,8 @@ const routes: Routes = [
     }),
     MatButtonModule,
     MatToolbarModule,
-    MatTabsModule
+    MatTabsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

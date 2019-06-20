@@ -55,12 +55,19 @@ $vehicle-info-line-height: 24px;
       .mat-raised-button {
         border-radius: 21px;
         font-weight: 200;
-      }
 
-      .mat-icon {
-        transform: translateX(8px);
+        .mat-icon {
+          transform: translateX(8px);
+        }
       }
     }
+  }
+
+  &__new-vin {
+    position: fixed;
+    z-index: 5;
+    bottom: 24px;
+    right: 24px;
   }
 
   &__vehicle-info {

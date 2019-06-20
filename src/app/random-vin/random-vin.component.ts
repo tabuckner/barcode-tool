@@ -98,10 +98,10 @@ export class RandomVinComponent implements OnInit {
   private getVehicleInfo() {
     this.nhtsa.decodeVin(this.randomVin).subscribe((data) => {
       const vinInfoArray = data.Results;
-      console.log(vinInfoArray);
+      // console.log(vinInfoArray);
       const desiredProps = [VPIC_VARIABLE_IDS.modeYear, VPIC_VARIABLE_IDS.make, VPIC_VARIABLE_IDS.model];
       this.vehicleInfo = this.nhtsa.getDesiredPropsAsObject<IRandomVinVehicleInfo>(vinInfoArray, desiredProps);
-      console.warn(this.vehicleInfo);
+      // console.warn(this.vehicleInfo);
     });
   }
 

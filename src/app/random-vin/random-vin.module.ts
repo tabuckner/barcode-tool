@@ -6,7 +6,7 @@ import { MatButtonModule, MatTooltipModule, MatRippleModule, MatSnackBarModule, 
 
 const routes: Routes = [
   { path: '', component: RandomVinComponent }
-]
+];
 
 @NgModule({
   declarations: [RandomVinComponent],
@@ -17,7 +17,7 @@ const routes: Routes = [
     MatTooltipModule,
     MatRippleModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
   ]
 })
 export class RandomVinModule { }

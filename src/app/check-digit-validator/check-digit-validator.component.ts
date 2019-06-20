@@ -20,6 +20,14 @@ export class CheckDigitValidatorComponent implements OnInit {
   ngOnInit() {
   }
 
+  public onChanges() {
+    if (this.vin.length >= 17) {
+      this.submit();
+    } else {
+      this.reset();
+    }
+  }
+
   public submit() {
     this.validate(this.vin);
   }
@@ -34,15 +42,15 @@ export class CheckDigitValidatorComponent implements OnInit {
     return this.checkDigitIsValid = true;
   }
 
-  public get status(): string {
-    const vinIsEntered = this.vin && this.vin.length === 17;
+  public get cardTitle(): string {
+    const vinIsEntered = this.vin && this.vin.length >= 17;
     const wasSubmitted = this.correctVin;
     if (vinIsEntered && wasSubmitted && this.checkDigitIsValid) {
-      return 'Check Digit is Valid';
+      return 'Check Digit is Valid!';
     } else if (vinIsEntered && wasSubmitted && !this.checkDigitIsValid) {
-      return 'Check Digit is Invalid';
+      return 'Check Digit is Invalid!';
     } else {
-      return 'Status';
+      return 'Not enough info yet.';
     }
   }
 

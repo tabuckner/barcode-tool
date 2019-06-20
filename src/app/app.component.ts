@@ -10,4 +10,15 @@ export class AppComponent {
   public title = 'VIN Tools';
   public version = environment.version;
   public timestamp = environment.deployTimestamp;
+  public navLinks = [
+  {
+    path: '/random-vin',
+    label: 'Get VIN'
+  },
+  {
+    path: '/check-digit-validator',
+    label: 'Check Digit Validation'
+  }
+];
+
 }

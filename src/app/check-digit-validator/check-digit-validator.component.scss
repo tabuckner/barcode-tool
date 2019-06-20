@@ -1,16 +1,51 @@
+@import '~@angular/material/theming';
+
 .check-digit {
   text-align: center;
-  height: calc(100vh - 64px);
+  height: 100%;
   display: flex;
-  align-content: center;
   justify-content: center;
-  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 48px 16px 0px 16px;
 
-  @media screen and (max-width: 599px) {
-    height: calc(100vh - 56px);
+  &--valid {
+    .vin-display__check-digit {
+      color: #40B178;
+    }
   }
 
-  mat-card {
-    padding: 48px;
+  &--invalid {
+    .vin-display__check-digit {
+      color: #D0021B;
+    }
+  }
+
+  @media screen and (max-width: 599px) {
+    padding-top: 36px;
+  }
+
+  .mat-card {
+    @include mat-elevation-transition;
+    @include mat-elevation(5, #000, .13);
+    width: 100%;
+    max-width: 850px;
+    padding: 52px;
+    margin: 0 auto auto;
+
+    @media screen and (max-width: 599px) {
+      padding: 24px;
+    }
+  }
+
+  .mat-card-title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    margin-bottom: 48px;
+  }
+
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 64px;
   }
 }

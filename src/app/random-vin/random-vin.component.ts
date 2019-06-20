@@ -80,7 +80,7 @@ export class RandomVinComponent implements OnInit {
   }
 
   public showSnackBarMessage(message: string): void {
-    this.snackBar.open(message, 'Dismiss', { duration: 1500 });
+    this.snackBar.open(message, 'Dismiss', { duration: 1500, panelClass: 'mat-snackbar--blue-text' });
   }
 
   public get validCheckDigit(): boolean {
@@ -98,10 +98,10 @@ export class RandomVinComponent implements OnInit {
   private getVehicleInfo() {
     this.nhtsa.decodeVin(this.randomVin).subscribe((data) => {
       const vinInfoArray = data.Results;
-      console.log(vinInfoArray);
+      // console.log(vinInfoArray);
       const desiredProps = [VPIC_VARIABLE_IDS.modeYear, VPIC_VARIABLE_IDS.make, VPIC_VARIABLE_IDS.model];
       this.vehicleInfo = this.nhtsa.getDesiredPropsAsObject<IRandomVinVehicleInfo>(vinInfoArray, desiredProps);
-      console.warn(this.vehicleInfo);
+      // console.warn(this.vehicleInfo);
     });
   }
 

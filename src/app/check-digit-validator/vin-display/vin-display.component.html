@@ -1,0 +1,5 @@
+<div class="vin-display">
+  <div class="vin-display__vin-first">{{ vinFirst }}</div>
+  <div class="vin-display__check-digit" *ngIf="vin.length >= 9">{{ checkDigit }}</div>
+  <div class="vin-display__vin-last">{{ vinLast }}</div>
+</div>

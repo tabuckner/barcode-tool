@@ -1,8 +1,10 @@
-<div class="check-digit">
+<div
+  class="check-digit"
+  [ngClass]="{'check-digit--valid': checkDigitIsValid, 'check-digit--invalid': !checkDigitIsValid}">
   <mat-card>
     <mat-card-title>{{ cardTitle }}</mat-card-title>
     <mat-card-content>
-      <div class="check-digit__vin">{{ vin }}</div>
+      <app-vin-display [vin]="vin"></app-vin-display>
       <mat-form-field>
         <input matInput type="text" placeholder="Enter VIN" [(ngModel)]="vin" (ngModelChange)="onChanges()" maxlength="18">
       </mat-form-field>

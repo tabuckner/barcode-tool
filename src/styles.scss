@@ -54,3 +54,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-tab-label-active {
   color: $barcode-tool-base-color;
 }
+
+.check-digit {
+
+  &--valid {
+    .vin-display__check-digit {
+      color: #40B178;
+    }
+  }
+
+  &--invalid {
+    .vin-display__check-digit {
+      color: #D0021B;
+    }
+  }
+}
+
+.mat-snackbar--blue-text {
+  .mat-button {
+    color: $barcode-tool-base-color;
+  }
+}

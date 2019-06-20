@@ -80,7 +80,7 @@ export class RandomVinComponent implements OnInit {
   }
 
   public showSnackBarMessage(message: string): void {
-    this.snackBar.open(message, 'Dismiss', { duration: 1500 });
+    this.snackBar.open(message, 'Dismiss', { duration: 1500, panelClass: 'mat-snackbar--blue-text' });
   }
 
   public get validCheckDigit(): boolean {

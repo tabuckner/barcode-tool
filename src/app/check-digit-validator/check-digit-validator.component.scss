@@ -8,6 +8,18 @@
   background: rgba(0, 0, 0, 0.06);
   padding: 48px 16px 0px 16px;
 
+  &--valid {
+    .vin-display__check-digit {
+      color: #40B178;
+    }
+  }
+
+  &--invalid {
+    .vin-display__check-digit {
+      color: #D0021B;
+    }
+  }
+
   @media screen and (max-width: 599px) {
     padding-top: 36px;
   }
@@ -19,6 +31,10 @@
     max-width: 850px;
     padding: 52px;
     margin: 0 auto auto;
+
+    @media screen and (max-width: 599px) {
+      padding: 24px;
+    }
   }
 
   .mat-card-title {
@@ -31,14 +47,5 @@
   .mat-form-field {
     width: 100%;
     margin-bottom: 64px;
-  }
-
-  &__vin {
-    font-size: 46px;
-    font-weight: 500;
-    line-height: 55px;
-    min-height: 55px;
-    text-transform: uppercase;
-    margin-bottom: 72px;
   }
 }

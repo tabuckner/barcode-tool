@@ -51,6 +51,15 @@ $vehicle-info-line-height: 24px;
       &:not(:last-of-type) {
         margin-bottom: 8px;
       }
+
+      .mat-raised-button {
+        border-radius: 21px;
+        font-weight: 200;
+      }
+
+      .mat-icon {
+        transform: translateX(8px);
+      }
     }
   }
 
